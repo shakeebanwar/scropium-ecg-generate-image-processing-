@@ -2,24 +2,32 @@
 import cv2
 import numpy as np
  
-img = cv2.imread('testing.jpg')
-print(img.shape) # Print image shape
-cv2.imshow("original", img)
+
+
+def imagecroper():
+    img = cv2.imread('MI.png')
+    #print(img.shape) # Print image shape
+    #cv2.imshow("original", img)
+    
+    # Cropping an image
+
+    cropped_image = img[170:1270, 220:1270]
+    
+    # Display cropped image
+    #cv2.imshow("cropped", cropped_image)
+
+    # Save the cropped image
+    cv2.imwrite("Cropped Image.jpg", cropped_image)
+
+
+
+# cv2.imshow("shortpart", cropped_image)
+
  
-# Cropping an image
-
-cropped_image = img[100:350, 200:1650]
- 
-# Display cropped image
-cv2.imshow("cropped", cropped_image)
-
-# Save the cropped image
-#cv2.imwrite("Cropped Image.jpg", cropped_image)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 
 
 
-#cv2.imshow("shortpart", cropped_image)
 
- 
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+#imagecroper()
